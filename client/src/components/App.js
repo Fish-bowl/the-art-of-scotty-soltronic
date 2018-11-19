@@ -12,7 +12,7 @@ import Paintings from './Paintings'
 import About from './About'
 import ProtectedRoute from './ProtectedRoute';
 import AuthRoute from './AuthRoute';
-import FetchUser from './FetchUser';
+// import FetchUser from './FetchUser';
 
 class App extends Component {
   render() {
@@ -20,7 +20,7 @@ class App extends Component {
       <div>
         <NavBar />
         <Flash />
-        <FetchUser>
+        {/* <FetchUser> */}
           <Switch>
             <Route exact path='/Paintings' component={Paintings} />
             <Route exact path='/About' component={About} />
@@ -31,7 +31,7 @@ class App extends Component {
             <AuthRoute exact path='/register' component={Register} />
             <Route component={NoMatch} />
           </Switch>
-        </FetchUser>
+        {/* </FetchUser> */}
       </div>
     );
   }

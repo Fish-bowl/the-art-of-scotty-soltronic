@@ -1,53 +1,93 @@
 import React from 'react'
-import axios from 'axios'
 import { CloudinaryContext, Transformation, Image } from 'cloudinary-react';
 import {
   Container,
   Segment,
   Header,
+  Card,
+  Divider,
 } from 'semantic-ui-react'
+import FishSlider from './FishSlider'
 import cloudinary from 'cloudinary-core';
 const cloudinaryCore = new cloudinary.Cloudinary({ cloud_name: 'defmethod' });
 
-
 class Gallery extends React.Component {
-  state = { gallery: [], }
+  state = {
+    // fish: [
+    //   "art_photos/blueFish",
+    //   "art_photos/yellowFish",
+    //   "art_photos/tracktorFish",
+    //   "art_photos/pcFish",
+    //   "art_photos/purpleFish",
+    //   "art_photos/blueFish",
+    // ],
 
-  // componentDidMount() {
-    // axios.get('https://res.cloudinary.com/defmethod/gallery_images/')
-    //   .then(res => {
-    //     debugger
-    //     console.log(res.data.resources);
-    //     this.setState({ gallery: res.data.resources });
-    //   });
-  //   axios({
-  //     method: 'get',
-  //     url: 'https://res.cloudinary.com/defmethod',
-  //     data: {
-  //       title: '',
-  //       url: ''
-  //     }
-  //   })
-  //   .then(res => {
-  //     console.log(res)
-  //   })
-  // }
+    publicId: [
+      "art_photos/wallFlower",
+      "art_photos/sunFlower",
+      "art_photos/pottedFlower",
+     
+      "art_photos/",
 
-render() {
-  return(
-    <Container>
-      this is gallery
-      <CloudinaryContext cloudName="defmethod">
-          <Image publicId="better_vw.jpg" >
-            <Transformation height="150" width="150" crop="fill" radius="20" />
-          </Image>
-        <Image publicId="gallery_images/dolph_vw.jpg" >
-          <Transformation height="150" width="150" crop="fill" radius="20" />
-        </Image>
-      </CloudinaryContext>
-    </Container>
-  )
+    ], 
+  }
+
+
+  
+  // style = { styles.image }
+ 
+  render() {
+    return(
+      <div>
+        <Segment basic >
+          <Header floated='left' as='h2'>Fish</Header>
+          <Divider />
+          <Container>
+            <CloudinaryContext cloudName="defmethod">
+              {/* <Card.Group >
+                {this.getFish()}
+              </Card.Group> */}
+            </CloudinaryContext>
+            <Segment>
+              <FishSlider />
+            </Segment>
+          </Container>
+        </Segment>
+      </div>
+          // <Container>
+          //   <Segment>
+          //     <CloudinaryContext cloudName="defmethod">
+          //       <Card>
+          //         <Image cloud_name='defmethod' publicId="art_photos/fishWithScott">
+          //           <Transformation
+          //             height="300"
+          //             width="300"
+          //             crop="fit"
+          //           />
+          //         </Image>
+          //       </Card>
+          //       <Card.Group itemsPerRow={4} centered stackable >
+          //         {this.getFish()}
+          //       </Card.Group>
+          //     </CloudinaryContext>
+          //   </Segment>
+          // </Container>
+    )
+  }
 }
+
+
+
+
+const styles = {
+  card: {
+    width: 'auto'
+  },
+
+  image: {
+    height: '300px',
+    width: '300px',
+  },
 }
 
 export default Gallery

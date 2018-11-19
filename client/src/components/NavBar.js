@@ -32,37 +32,20 @@ class NavBar extends Component {
   state = {}
 
   handleItemClick = (e, { name }) => this.setState({ activeItem: name })
-
   render() {
-    const { activeItem } = this.state
+    const {activeItem} = this.state
     return (
-      <Menu stackable size='huge' pointing secondary>
+      <Menu style={styles.menu} secondary pointing >
         <Menu.Item 
-          style={{alignSelf: 'center', justifySelf: 'center'}} 
-          header 
-          as={Link}
-          name='home' 
-          to='/'
-          active={activeItem === 'home'}
+          style={styles.menuItem} 
+          as={Link} 
+          to='/' 
+          name='Home' 
+          active={activeItem === 'Home'}
           onClick={this.handleItemClick}
-        >
-            The Art of Scotty Soltronic
-        </Menu.Item>
-        <Menu.Item 
-          active={activeItem === 'Gallery'}
-          onClick={this.handleItemClick} 
-          as={Link} 
-          to='/Gallery' 
-          name='Gallery' 
         />
         <Menu.Item 
-          as={Link} 
-          to='/Paintings' 
-          name='Paintings'
-          active={activeItem === 'Paintings'}
-          onClick={this.handleItemClick} 
-        />
-        <Menu.Item 
+          style={styles.menuItem} 
           as={Link} 
           to='/About' 
           name='About' 
@@ -70,33 +53,52 @@ class NavBar extends Component {
           onClick={this.handleItemClick}
         />
         <Menu.Item 
+          style={styles.menuHeader} 
+          header 
+          as={Link} 
+          to='/' 
+          name='The Art of Scotty Soltronic' 
+          active={activeItem === 'Home'}
+          onClick={this.handleItemClick}
+        />
+        <Menu.Item 
+          style={styles.menuItem} 
+          active={activeItem === 'Contact'}
+          onClick={this.handleItemClick} 
           as={Link} 
           to='/Contact' 
           name='Contact' 
-          active={activeItem === 'Contact'}
-          onClick={this.handleItemClick}
+        />
+        <Menu.Item 
+          style={styles.menuItem} 
+          as={Link} 
+          to='/Gallery' 
+          name='Gallery' 
+          active={activeItem === 'Gallery'}
+          onClick={this.handleItemClick} 
         />
       </Menu>
     );
   }
 }
 
-const styles = {
-  menu: {
-    display: 'flex',
-    justifyContent: 'center'
-  },
-  leftItem: {
-    paddingLeft: '10%',
-    fontSize: '1.25em',
-    alignSelf: 'center'
-  },
-  rightItem: {
-    paddingRight: '10%',
-    fontSize: '1.25em',
-    alignSelf: 'center'
-  },
-}
+  const styles = {
+    menu: {
+      display: 'flex',
+      justifyContent: 'center',
+    },
+    menuHeader: {
+      marginLeft: '25px',
+      marginRight: '25px',
+      alignSelf: 'center',
+      fontSize: '25px'
+    },
+    menuItem: {
+      marginLeft: '25px',
+      marginRight: '25px',
+      alignSelf: 'center',
+    },
+  }
 
 const mapStateToProps = state => {
   return { user: state.user };
