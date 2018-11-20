@@ -22,7 +22,7 @@ class FishSlider extends React.Component {
     return (
       fish.map((pubId, i) => {
           return (
-            <Card centered style={styles.card}  >
+            <div>
               <Image key={i} publicId={pubId} cloud_name='defmethod' >
                 <Transformation
                   height="300"
@@ -30,9 +30,7 @@ class FishSlider extends React.Component {
                   crop="fit"
                 />
               </Image>
-              <Card.Description>about the piece of art</Card.Description>
-              <Card.Meta>price: $$$</Card.Meta>
-            </Card>
+            </div>
           )
       }))
   }
@@ -40,7 +38,7 @@ class FishSlider extends React.Component {
   render() {
     const settings = {
       rows: 1,
-      slidesPerRow: 5,
+      slidesPerRow: 1,
       dots: true,
       infinite: true,
       speed: 500,
@@ -48,11 +46,13 @@ class FishSlider extends React.Component {
       slidesToScroll: 1
     };
     return (
-      <Slider {...settings}>
-        <Card.Group>
-          {this.getFish()}
-        </Card.Group>
-      </Slider>
+      <div className='container' >
+        <Slider {...settings}>
+          
+            {this.getFish()}
+        
+        </Slider>
+      </div>
     );
   }
 }
