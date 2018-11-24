@@ -4,6 +4,7 @@ import {
   Container,
   Segment,
   Grid,
+  Divider,
   Image,
 } from 'semantic-ui-react'
 import Carousel from './Carousel'
@@ -29,6 +30,43 @@ class Home extends Component {
             <Grid.Column width='4' >
               <Segment inverted>
                 <h1>this will be your social links</h1>
+              </Segment>
+            </Grid.Column>
+          </Grid.Row>
+          <Divider/>
+          <Grid.Row style={{ display: 'flex', justifyContent: 'center',}} columns={1} >
+            <Grid.Column style={styles.test.column} width={10} >
+              <Segment inverted >
+                <p>
+                  Labore nisi non commodo cillum. Et eu est non qui voluptate qui non consequat. Consectetur tempor sit labore aliqua nulla irure ea officia qui Lorem nostrud minim non. Aliquip in id consectetur adipisicing cupidatat sunt quis sunt incididunt voluptate duis esse. Irure proident occaecat fugiat incididunt mollit aliquip. Deserunt consequat consectetur exercitation enim dolore Lorem enim ea excepteur. Excepteur aliqua consectetur nostrud mollit do ad reprehenderit magna magna magna ex velit velit laborum.
+                </p>
+              </Segment>
+            </Grid.Column>
+          </Grid.Row>
+          <Grid.Row style={{ display: 'flex', justifyContent: 'center', }} columns={1} >
+            <Grid.Column style={styles.test.column} width={10} >
+              <Segment inverted >
+                <p>
+                  Labore nisi non commodo cillum. Et eu est non qui voluptate qui non consequat. Consectetur tempor sit labore aliqua nulla irure ea officia qui Lorem nostrud minim non. Aliquip in id consectetur adipisicing cupidatat sunt quis sunt incididunt voluptate duis esse. Irure proident occaecat fugiat incididunt mollit aliquip. Deserunt consequat consectetur exercitation enim dolore Lorem enim ea excepteur. Excepteur aliqua consectetur nostrud mollit do ad reprehenderit magna magna magna ex velit velit laborum.
+                </p>
+              </Segment>
+            </Grid.Column>
+          </Grid.Row>
+          <Grid.Row style={{ display: 'flex', justifyContent: 'center', }} columns={1} >
+            <Grid.Column style={styles.test.column} width={10} >
+              <Segment inverted >
+                <p>
+                  Labore nisi non commodo cillum. Et eu est non qui voluptate qui non consequat. Consectetur tempor sit labore aliqua nulla irure ea officia qui Lorem nostrud minim non. Aliquip in id consectetur adipisicing cupidatat sunt quis sunt incididunt voluptate duis esse. Irure proident occaecat fugiat incididunt mollit aliquip. Deserunt consequat consectetur exercitation enim dolore Lorem enim ea excepteur. Excepteur aliqua consectetur nostrud mollit do ad reprehenderit magna magna magna ex velit velit laborum.
+                </p>
+              </Segment>
+            </Grid.Column>
+          </Grid.Row>
+          <Grid.Row style={{ display: 'flex', justifyContent: 'center', }} columns={1} >
+            <Grid.Column style={styles.test.column} width={10} >
+              <Segment inverted >
+                <p>
+                  Labore nisi non commodo cillum. Et eu est non qui voluptate qui non consequat. Consectetur tempor sit labore aliqua nulla irure ea officia qui Lorem nostrud minim non. Aliquip in id consectetur adipisicing cupidatat sunt quis sunt incididunt voluptate duis esse. Irure proident occaecat fugiat incididunt mollit aliquip. Deserunt consequat consectetur exercitation enim dolore Lorem enim ea excepteur. Excepteur aliqua consectetur nostrud mollit do ad reprehenderit magna magna magna ex velit velit laborum.
+                </p>
               </Segment>
             </Grid.Column>
           </Grid.Row>
@@ -64,7 +102,8 @@ const styles = {
   backgroundImage: {
     position: 'fixed',
     zIndex: '-1',
-    height: '600px',
+    height: '100vh',
+    top: '0',
     width: '100vw',
     backgroundColor: 'gray'
   },

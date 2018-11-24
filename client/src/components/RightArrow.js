@@ -7,7 +7,7 @@ import {
 const RightArrow = (props) => {
   return (
     <Button 
-      style={styles.right} 
+      // style={styles.right} 
       icon='angle double right' 
       onClick={props.goToNextSlide} 
       circular
@@ -15,12 +15,12 @@ const RightArrow = (props) => {
   );
 }
 
-const styles = {
-  right: {
-    position: 'absolute',
-    top: '50%',
-    left: '590px'
-  },
-}
+// const styles = {
+//   right: {
+//     position: 'absolute',
+//     top: '50%',
+//     left: '590px'
+//   },
+// }
 
 export default RightArrow;

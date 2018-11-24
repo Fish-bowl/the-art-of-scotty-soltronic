@@ -13,7 +13,6 @@ class FishSlider extends React.Component {
       "art_photos/tracktorFish",
       "art_photos/pcFish",
       "art_photos/purpleFish",
-      "art_photos/blueFish",
     ],
   }
 
@@ -22,12 +21,12 @@ class FishSlider extends React.Component {
     return (
       fish.map((pubId, i) => {
           return (
-            <div>
+            <div style={styles.imageContainer} >
               <Image key={i} publicId={pubId} cloud_name='defmethod' >
                 <Transformation
                   height="300"
-                  width="300"
-                  crop="fit"
+                  width="400"
+                  crop="fill"
                 />
               </Image>
             </div>
@@ -39,18 +38,19 @@ class FishSlider extends React.Component {
     const settings = {
       rows: 1,
       slidesPerRow: 1,
+      centerMode: true,
+      draggable: true,
+      centerPadding: '50px',
       dots: true,
       infinite: true,
       speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1
+      slidesToShow: 3,
+      slidesToScroll: 3
     };
     return (
-      <div className='container' >
+      <div style={styles.container} >
         <Slider {...settings}>
-          
-            {this.getFish()}
-        
+          {this.getFish()}
         </Slider>
       </div>
     );
@@ -58,6 +58,15 @@ class FishSlider extends React.Component {
 }
 
 const styles ={
+  container: {
+    maxWidth: '100vw'
+  },
+
+  imageContainer: {
+    width: '400px',
+    height: '400px',
+  },
+
   card: {
     width: 'auto'
   },

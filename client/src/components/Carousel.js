@@ -39,13 +39,16 @@ class Carousel extends React.Component {
   }
 
   goToPrevSlide = () => {
-    if (this.state.currentIndex === 0) {
-      return this.setState({
-        currentIndex: 0,
-      })
-    } else (this.setState(prevState => ({
-        currentIndex: prevState.currentIndex - 1,})
-        ))
+    const {publicId} = this.state
+    const last_element = publicId.length - 1
+    if ( this.state.currentIndex === 0 ) {
+      return ( this.setState({
+        currentIndex: last_element
+      }))
+    } 
+    else (this.setState(prevState => ({
+        currentIndex: prevState.currentIndex - 1,
+      })))
   }
 
   goToNextSlide = () => {
@@ -69,8 +72,10 @@ class Carousel extends React.Component {
           </Image> */}
           {this.getImages()}
         </CloudinaryContext>
-        <LeftArrow goToPrevSlide={this.goToPrevSlide} />
-        <RightArrow goToNextSlide={this.goToNextSlide} />
+        <Segment style={styles.buttons} basic >
+          <LeftArrow goToPrevSlide={this.goToPrevSlide} />
+          <RightArrow goToNextSlide={this.goToNextSlide} />
+        </Segment>
       </Segment>
     )
   }
@@ -88,6 +93,12 @@ const styles = {
     border: 'solid red 3px',
     display: 'flex',
     justifyContent: 'center',
+  },
+  buttons: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    position: 'relative',
+    bottom: '60%',
   },
 }
 

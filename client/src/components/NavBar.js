@@ -35,7 +35,7 @@ class NavBar extends Component {
   render() {
     const {activeItem} = this.state
     return (
-      <Menu style={styles.menu} secondary pointing >
+      <Menu stackable style={styles.menu} secondary pointing >
         <Menu.Item 
           style={styles.menuItem} 
           as={Link} 
@@ -86,6 +86,8 @@ class NavBar extends Component {
     menu: {
       display: 'flex',
       justifyContent: 'center',
+      minHeight: '70px',
+      backgroundColor: 'white',
     },
     menuHeader: {
       marginLeft: '25px',

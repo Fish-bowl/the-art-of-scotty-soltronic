@@ -42,16 +42,9 @@ class Gallery extends React.Component {
         <Segment basic >
           <Header floated='left' as='h2'>Fish</Header>
           <Divider />
-          <Container>
-            <CloudinaryContext cloudName="defmethod">
-              {/* <Card.Group >
-                {this.getFish()}
-              </Card.Group> */}
-            </CloudinaryContext>
             <Segment>
               <FishSlider />
             </Segment>
-          </Container>
         </Segment>
       </div>
           // <Container>
