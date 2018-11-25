@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import { Card, } from 'semantic-ui-react'
+import { Card, Segment, } from 'semantic-ui-react'
 import { CloudinaryContext, Transformation, Image } from 'cloudinary-react';
 import cloudinary from 'cloudinary-core';
 const cloudinaryCore = new cloudinary.Cloudinary({ cloud_name: 'defmethod' });
@@ -34,6 +34,10 @@ class FishSlider extends React.Component {
       }))
   }
 
+  // componentDidMount() {
+  //   this.slider.slickPlay();
+  // }
+
   render() {
     const settings = {
       rows: 1,
@@ -48,11 +52,11 @@ class FishSlider extends React.Component {
       slidesToScroll: 3
     };
     return (
-      <div style={styles.container} >
+      <Segment inverted style={styles.container} >
         <Slider {...settings}>
           {this.getFish()}
         </Slider>
-      </div>
+      </Segment>
     );
   }
 }

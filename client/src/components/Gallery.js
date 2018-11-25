@@ -26,7 +26,6 @@ class Gallery extends React.Component {
       "art_photos/wallFlower",
       "art_photos/sunFlower",
       "art_photos/pottedFlower",
-     
       "art_photos/",
 
     ], 
@@ -39,10 +38,19 @@ class Gallery extends React.Component {
   render() {
     return(
       <div>
-        <Segment basic >
-          <Header floated='left' as='h2'>Fish</Header>
+        <Segment inverted >
+          <Header textAlign='center' as='h2'>Fish</Header>
           <Divider />
-            <Segment>
+            <Segment inverted >
+              <FishSlider />
+            </Segment>
+            <Header textAlign='center' as='h2'>Flowers</Header>
+            <Divider />
+            <Segment inverted >
+              <FishSlider />
+            </Segment>
+            <Divider />
+            <Segment inverted >
               <FishSlider />
             </Segment>
         </Segment>
