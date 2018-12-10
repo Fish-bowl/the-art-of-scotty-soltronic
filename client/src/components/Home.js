@@ -1,22 +1,23 @@
 import React, { Component } from 'react'
+import { CloudinaryContext, Transformation, Image } from 'cloudinary-react';
 import { 
   Header,
   Container,
   Segment,
   Grid,
   Divider,
-  Image,
 } from 'semantic-ui-react'
+import BackgroundImage from './BackgroundImage'
 import Carousel from './Carousel'
+import cloudinary from 'cloudinary-core';
+const cloudinaryCore = new cloudinary.Cloudinary({ cloud_name: 'defmethod' });
+
 
 class Home extends Component {
   render() {
     return (
       // <Container>
       <div>
-        <Segment style={styles.backgroundImage} >
-          <p>this is large high res pic</p>
-        </Segment>
         <Grid stackable >
           <Grid.Row style={styles.test.row} columns='3'>
             <Grid.Column style={styles.test.column} width='4' >

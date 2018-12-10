@@ -36,15 +36,21 @@ export default () =>
             crop="fit"
             />
         </Image>
-        <p>
-          Proident excepteur aliqua ad commodo deserunt aliquip id pariatur. Et dolore ullamco ullamco ea labore laborum occaecat id laboris exercitation ullamco dolor in incididunt. Quis qui fugiat deserunt quis commodo reprehenderit deserunt ipsum irure laborum consequat. Eu exercitation aliquip ullamco est. Aute aliquip sint deserunt mollit tempor cupidatat eu deserunt fugiat aute. Veniam amet nisi tempor labore reprehenderit cillum exercitation eu elit pariatur.
-          Irure veniam consectetur cillum incididunt adipisicing ad eu et. Magna duis sit pariatur esse in quis deserunt duis aliquip in cupidatat pariatur anim nisi. Velit do dolore proident sunt enim id eiusmod elit aliqua officia ea reprehenderit sit. Voluptate enim minim veniam in id proident non veniam laborum commodo laboris officia. Sint cillum consectetur Lorem laborum cupidatat. Irure in irure irure id incididunt est laborum quis in pariatur ex proident duis.
-          Magna aute eiusmod velit adipisicing officia eiusmod dolor nostrud labore pariatur aliqua excepteur voluptate. Adipisicing cillum qui quis sint dolore proident incididunt sit qui irure laborum. Sit nulla esse magna Lorem excepteur adipisicing tempor. Eu laborum pariatur id mollit. Commodo non ullamco dolor voluptate irure mollit ut veniam proident eu esse. Ex laborum laborum velit aliquip. Do ad qui irure sint consequat anim voluptate esse aliquip labore reprehenderit reprehenderit cupidatat.
+        <p style={styles.para} >
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;One part Inventor, one part Artist and 3  parts Mad Scientist, Based in Park City, Utah, Whitaker’s work is funny, whimsical and down right insane. Inspired by the broken and discarded items of a society bent on consumption, Whitaker developed his own Aesthetic called “Jenk”
         </p>
-        <p>
-          Proident excepteur aliqua ad commodo deserunt aliquip id pariatur. Et dolore ullamco ullamco ea labore laborum occaecat id laboris exercitation ullamco dolor in incididunt. Quis qui fugiat deserunt quis commodo reprehenderit deserunt ipsum irure laborum consequat. Eu exercitation aliquip ullamco est. Aute aliquip sint deserunt mollit tempor cupidatat eu deserunt fugiat aute. Veniam amet nisi tempor labore reprehenderit cillum exercitation eu elit pariatur.
-          Irure veniam consectetur cillum incididunt adipisicing ad eu et. Magna duis sit pariatur esse in quis deserunt duis aliquip in cupidatat pariatur anim nisi. Velit do dolore proident sunt enim id eiusmod elit aliqua officia ea reprehenderit sit. Voluptate enim minim veniam in id proident non veniam laborum commodo laboris officia. Sint cillum consectetur Lorem laborum cupidatat. Irure in irure irure id incididunt est laborum quis in pariatur ex proident duis.
-          Magna aute eiusmod velit adipisicing officia eiusmod dolor nostrud labore pariatur aliqua excepteur voluptate. Adipisicing cillum qui quis sint dolore proident incididunt sit qui irure laborum. Sit nulla esse magna Lorem excepteur adipisicing tempor. Eu laborum pariatur id mollit. Commodo non ullamco dolor voluptate irure mollit ut veniam proident eu esse. Ex laborum laborum velit aliquip. Do ad qui irure sint consequat anim voluptate esse aliquip labore reprehenderit reprehenderit cupidatat.
+        <p style={styles.para} >
+          Each piece of “Jenk” has a story and has lived another life. These treasures contain an energy that when combined with each other, tell a new story. His work represents over two decade of selective treasure hunting, polishing and organizing. Each piece is built entirely from reclaimed and recycled materials, giving them one more shot at life. This work shouts loudly at the viewer, “There is no such thing as trash, only treasure.” and urges the viewer to examine their own use of these precious resources.
+        </p>
+        <p style={styles.para} >
+          Whitaker is the founder of the Utah based artist collective the JenkStars whose mission it is to educate through Art Music and Technology,  who travel the country with their solar powered art installations spreading the word on sustainability. He is also the founder of the Buildingman Sustainable Living Art and Music Festival held twice a year at the JenkStar Ranch in Green River Utah.
+        </p>
+        <p style={styles.para} >
+          Whitaker recently established the non profit JenkStar CASL, Center for Art and Sustainable Living in Salt Lake City and hosts events to support local artists, musicians and scientists in their pursuit of sustainable living.
+        </p>
+        <p style={styles.para} >
+          'You never change things by fighting the existing reality.To change something, build a new model that makes the old one obsolete.' ~ Buckminster Fuller
+         
         </p>
     </Segment>
   </Container>
@@ -58,5 +64,8 @@ const styles = {
     height: '300px',
     width: '300px',
     float: 'left',
-  }
+  },
+  para: {
+    fontSize: '1.5em'
+  },
 }

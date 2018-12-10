@@ -13,12 +13,17 @@ import About from './About'
 import Footer from './Footer'
 import ProtectedRoute from './ProtectedRoute';
 import AuthRoute from './AuthRoute';
+import {Segment} from 'semantic-ui-react'
+import BackgroundImage from './BackgroundImage'
 // import FetchUser from './FetchUser';
 
 class App extends Component {
   render() {
     return (
       <div>
+        <Segment style={styles.backgroundImage} >
+          <BackgroundImage />
+        </Segment>
         <NavBar />
         <Flash />
         {/* <FetchUser> */}
@@ -37,6 +42,18 @@ class App extends Component {
       </div>
     );
   }
+}
+
+const styles = {
+  backgroundImage: {
+    position: 'fixed',
+    zIndex: '-1',
+    height: '100vh',
+    top: '0',
+    width: '100vw',
+    padding: '0',
+    
+  },
 }
 
 export default App;
