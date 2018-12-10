@@ -3,11 +3,11 @@ import { CloudinaryContext, Transformation, Image } from 'cloudinary-react';
 import { 
   Header,
   Container,
+  Icon,
   Segment,
   Grid,
   Divider,
 } from 'semantic-ui-react'
-import BackgroundImage from './BackgroundImage'
 import Carousel from './Carousel'
 import cloudinary from 'cloudinary-core';
 const cloudinaryCore = new cloudinary.Cloudinary({ cloud_name: 'defmethod' });
@@ -30,7 +30,7 @@ class Home extends Component {
             </Grid.Column>
             <Grid.Column width='4' >
               <Segment inverted>
-                <h1>this will be your social links</h1>
+                <Icon size='large' name='facebook' color='blue' />
               </Segment>
             </Grid.Column>
           </Grid.Row>
