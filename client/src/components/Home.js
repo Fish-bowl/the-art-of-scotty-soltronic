@@ -9,6 +9,7 @@ import {
   Divider,
 } from 'semantic-ui-react'
 import Carousel from './Carousel'
+import MediaIcons from './MediaIcons'
 import cloudinary from 'cloudinary-core';
 const cloudinaryCore = new cloudinary.Cloudinary({ cloud_name: 'defmethod' });
 
@@ -29,9 +30,7 @@ class Home extends Component {
               <Carousel />
             </Grid.Column>
             <Grid.Column width='4' >
-              <Segment inverted>
-                <Icon size='large' name='facebook' color='blue' />
-              </Segment>
+              <MediaIcons />
             </Grid.Column>
           </Grid.Row>
           <Divider/>
