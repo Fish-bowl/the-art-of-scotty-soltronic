@@ -19,6 +19,7 @@ class Home extends Component {
     return (
       // <Container>
       <div>
+        <Divider section />
         <Grid stackable >
           <Grid.Row style={styles.test.row} columns='3'>
             <Grid.Column style={styles.test.column} width='4' >
@@ -29,8 +30,8 @@ class Home extends Component {
             <Grid.Column width='8' >
               <Carousel />
             </Grid.Column>
-            <Grid.Column width='4' >
-              <MediaIcons />
+            <Grid.Column style={{position: 'relative'}} width='4' >
+              <MediaIcons style={{}} />
             </Grid.Column>
           </Grid.Row>
           <Divider/>

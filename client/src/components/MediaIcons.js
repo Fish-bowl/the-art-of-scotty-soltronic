@@ -40,7 +40,9 @@ class MediaIcons extends React.Component {
 const styles = {
   container: {
     display: 'flex',
-    justifyContent: 'space-evenly'
+    justifyContent: 'space-evenly',
+    position: 'sticky',
+    top: '50%'
   },
 
   icons: {}
