@@ -28,6 +28,10 @@ import {
 
 class Contact extends React.Component {
   state = {
+    template_params: {
+      from_name: '',
+      message: '',
+    },
     first_name: '',
     last_name: '',
     email: '',
@@ -41,7 +45,7 @@ class Contact extends React.Component {
         console.log(res.data)
       })
 
-    // emailjs.send('gmail','template_X6vyvytd', templateParams)
+    // emailjs.send('gmail','template_X6vyvytd', this.state.templateParams)
     //   .then(function(response) {
     //      console.log('SUCCESS!', response.status, response.text);
     //   }, function(err) {
@@ -57,7 +61,7 @@ class Contact extends React.Component {
   }
   //   handleOnSubmit = event => {
   //     event.preventDefault();
-  //     this.props.submitContactReqToServer(‘/contacts’, this.state)
+  //     // this.props.submitContactReqToServer(‘/contacts’, this.state)
   //     this.setState({ name: ‘’, email: ‘’, message: ‘’ })
   //  }
 
@@ -78,40 +82,10 @@ class Contact extends React.Component {
           </Header>
           <Divider />
           <Segment inverted >
-            <Form inverted >
-              <Form.Group widths='equal'>
-                <Form.Field
-                  id='form-input-control-first-name'
-                  control={Input}
-                  label='First name'
-                  placeholder='First name'
-                />
-                <Form.Field
-                  id='form-input-control-last-name'
-                  control={Input}
-                  label='Last name'
-                  placeholder='Last name'
-                />
-                <Form.Field
-                  id='form-input-control-email'
-                  control={Input}
-                  label='Email'
-                  placeholder='Email'
-                />
-              </Form.Group>
-              <Form.Field
-                id='form-textarea-control-opinion'
-                control={TextArea}
-                label='Message'
-                placeholder='Message'
-              />
-              {/* <Form.Field
-                id='form-button-control-public'
-                control={Button}
-                content='Confirm'
-                label='Submit'
-              /> */}
-              <Button type='submit' name='Submit' />
+            <Form inverted>
+              <Form.Input name="Name" placeholder="Name" label="Name"  />
+              <Form.Input name="email" placeholder="Email" label="Email" />
+              <Form.Button type="submit">Submit</Form.Button>
             </Form>
           </Segment>
         </Container>
