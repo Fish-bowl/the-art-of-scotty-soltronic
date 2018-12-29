@@ -1,6 +1,5 @@
 import React from 'react'
 import {
-  Icon,
   Segment,
   Button,
 } from 'semantic-ui-react'
@@ -11,27 +10,40 @@ class MediaIcons extends React.Component {
     alert("i've been clicked")
   }
 
-  handleFb = () => {
-    alert('fb')
-  }
+  // handleFb = () => {
+  //   alert('fb')
+  // }
 
-  handleInsta = () => {
-    alert('insta')
-  }
+  // handleInsta = () => {
+  //   alert('insta')
+  // }
 
-  handleMail = () => {
-    alert('mail')
-  }
+  // handleMail = () => {
+  //   alert('mail')
+  // }
 
   render() {
     return(
       <Segment compact style={styles.container} inverted>
-        <Button icon='facebook' size='large' basic color='blue' circular onClick={this.handlefb} />
-        <Button icon='instagram' size='large' basic color='grey' circular onClick={this.handleInsta} />
+        <Button 
+        href="https://www.facebook.com/soltronic" 
+        target='_blank' 
+        icon='facebook' 
+        size='large' 
+        basic 
+        color='blue' 
+        circular 
+      />
+        <Button 
+          href="https://www.instagram.com/scottysoltronic/" 
+          target="_blank" 
+          icon='instagram' 
+          size='large' 
+          basic 
+          color='grey' 
+          circular 
+        />
         <Button icon='mail' size='large' basic color='red' circular onClick={this.handleMail} />
-        {/* <Icon size='large' name='facebook' color='blue' />
-        <Icon size='large' name='instagram' color='grey' />
-        <Icon size='large' name='mail' golor='red' /> */}
       </Segment>
     )
   }
@@ -42,7 +54,7 @@ const styles = {
     display: 'flex',
     justifyContent: 'space-evenly',
     position: 'sticky',
-    top: '50%'
+    top: '30px'
   },
 
   icons: {}

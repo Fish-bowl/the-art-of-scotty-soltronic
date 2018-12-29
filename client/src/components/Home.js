@@ -1,23 +1,16 @@
 import React, { Component } from 'react'
-import { CloudinaryContext, Transformation, Image } from 'cloudinary-react';
 import { 
-  Header,
-  Container,
-  Icon,
   Segment,
   Grid,
   Divider,
 } from 'semantic-ui-react'
 import Carousel from './Carousel'
 import MediaIcons from './MediaIcons'
-import cloudinary from 'cloudinary-core';
-const cloudinaryCore = new cloudinary.Cloudinary({ cloud_name: 'defmethod' });
 
 
 class Home extends Component {
   render() {
     return (
-      // <Container>
       <div>
         <Divider section />
         <Grid stackable >
@@ -36,15 +29,6 @@ class Home extends Component {
           </Grid.Row>
           <Divider/>
           <Grid.Row style={{ display: 'flex', justifyContent: 'center',}} columns={1} >
-            <Grid.Column style={styles.test.column} width={10} >
-              <Segment inverted >
-                <p>
-                  Labore nisi non commodo cillum. Et eu est non qui voluptate qui non consequat. Consectetur tempor sit labore aliqua nulla irure ea officia qui Lorem nostrud minim non. Aliquip in id consectetur adipisicing cupidatat sunt quis sunt incididunt voluptate duis esse. Irure proident occaecat fugiat incididunt mollit aliquip. Deserunt consequat consectetur exercitation enim dolore Lorem enim ea excepteur. Excepteur aliqua consectetur nostrud mollit do ad reprehenderit magna magna magna ex velit velit laborum.
-                </p>
-              </Segment>
-            </Grid.Column>
-          </Grid.Row>
-          <Grid.Row style={{ display: 'flex', justifyContent: 'center', }} columns={1} >
             <Grid.Column style={styles.test.column} width={10} >
               <Segment inverted >
                 <p>
