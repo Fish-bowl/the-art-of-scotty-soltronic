@@ -33,6 +33,7 @@ class Contact extends React.Component {
     email: '',
     message: ''
   }
+
   sender = () => {
 
     axios.post('https://api.emailjs.com/api/v1.0/')
@@ -72,8 +73,8 @@ class Contact extends React.Component {
           <Header style={styles.header} as='h1'>Want To perchase a peice of my work?</Header>
           <Header style={styles.header} as='h3'>
             fill out the form below and please include the peice in question. 
-            <br /> 
-            Or if you would like one custom made, please give as many details as possible
+            <Divider horizontal>Or</Divider>
+            Or if you would like one custom made,  please give as many details as possible
           </Header>
           <Divider />
           <Segment inverted >
