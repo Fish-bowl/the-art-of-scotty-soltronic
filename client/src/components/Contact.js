@@ -78,13 +78,16 @@ class Contact extends React.Component {
           <Header style={styles.header} as='h3'>
             fill out the form below and please include the peice in question. 
             <Divider horizontal>Or</Divider>
-            Or if you would like one custom made,  please give as many details as possible
+            if you would like one custom made,  please give as many details as possible
           </Header>
           <Divider />
           <Segment inverted >
             <Form inverted>
+            <Form.Group widths='equal'>
               <Form.Input name="Name" placeholder="Name" label="Name"  />
               <Form.Input name="email" placeholder="Email" label="Email" />
+            </Form.Group>
+            <Form.TextArea name='message' placeholder='Message' lable="message" />
               <Form.Button type="submit">Submit</Form.Button>
             </Form>
           </Segment>
