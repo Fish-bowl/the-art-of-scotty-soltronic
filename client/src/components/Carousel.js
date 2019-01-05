@@ -22,14 +22,12 @@ class Carousel extends React.Component {
     const { publicId, currentIndex } = this.state
     return(
     publicId.map((pubId, i) => {
-      // debugger
       if (currentIndex === i)
-      // debugger
         return (
           <Image key={i} publicId={pubId} cloud_name='defmethod' >
             <Transformation
-              height="300"
-              width="300"
+              height="400"
+              width="400"
               crop="fill"
               radius="20"
             />
@@ -65,11 +63,8 @@ class Carousel extends React.Component {
 
   render() {
     return (
-      <Segment inverted style={styles.container} >
+      <Segment basic style={styles.container} >
         <CloudinaryContext style={styles.cloudBox} cloudName="defmethod">
-          {/* <Image publicId="better_vw.jpg" >
-            <Transformation height="150" width="150" crop="fill" radius="20" />
-          </Image> */}
           {this.getImages()}
         </CloudinaryContext>
         <Segment style={styles.buttons} basic >
@@ -80,9 +75,6 @@ class Carousel extends React.Component {
     )
   }
 }
-{/* <Image publicId="better_vw.jpg" >
-  <Transformation height="150" width="150" crop="fill" radius="20" />
-</Image> */}
 
 const styles = {
   container: {

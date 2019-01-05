@@ -14,30 +14,23 @@ class Home extends Component {
       <div>
         <Divider section />
         <Grid stackable >
-          <Grid.Row style={styles.test.row} columns='3'>
-            <Grid.Column style={styles.test.column} width='4' >
-              <Segment inverted>
-                <h1>this will be why you make art</h1>
-              </Segment>
-            </Grid.Column>
-            <Grid.Column width='8' >
-              <Carousel />
-            </Grid.Column>
-            <Grid.Column style={{position: 'relative'}} width='4' >
-              <MediaIcons style={{}} />
-            </Grid.Column>
-          </Grid.Row>
+          <Segment style={styles.test.seg} inverted fluid >
+            <Grid.Row stretched style={styles.test.row} columns='3'>
+              <Grid.Column style={styles.test.column} width='4' >
+                <Segment inverted>
+                  <h1>this will be why you make art</h1>
+                </Segment>
+              </Grid.Column>
+              <Grid.Column width='8' >
+                <Carousel />
+              </Grid.Column>
+              <Grid.Column style={{position: 'relative'}} width='4' >
+                <MediaIcons />
+              </Grid.Column>
+            </Grid.Row>
+          </Segment>
           <Divider/>
           <Grid.Row style={{ display: 'flex', justifyContent: 'center',}} columns={1} >
-            <Grid.Column style={styles.test.column} width={10} >
-              <Segment inverted >
-                <p>
-                  Labore nisi non commodo cillum. Et eu est non qui voluptate qui non consequat. Consectetur tempor sit labore aliqua nulla irure ea officia qui Lorem nostrud minim non. Aliquip in id consectetur adipisicing cupidatat sunt quis sunt incididunt voluptate duis esse. Irure proident occaecat fugiat incididunt mollit aliquip. Deserunt consequat consectetur exercitation enim dolore Lorem enim ea excepteur. Excepteur aliqua consectetur nostrud mollit do ad reprehenderit magna magna magna ex velit velit laborum.
-                </p>
-              </Segment>
-            </Grid.Column>
-          </Grid.Row>
-          <Grid.Row style={{ display: 'flex', justifyContent: 'center', }} columns={1} >
             <Grid.Column style={styles.test.column} width={10} >
               <Segment inverted >
                 <p>
@@ -70,6 +63,11 @@ const styles = {
     },
     column: {
       alignContent: 'center'
+    },
+    seg: {
+      height: '600px',
+      width: '100vw',
+
     },
   },
 
