@@ -87,7 +87,7 @@ class NavBar extends Component {
       display: 'flex',
       justifyContent: 'center',
       minHeight: '70px',
-      backgroundColor: 'white',
+      backgroundColor: 'black',
     },
     menuHeader: {
       marginLeft: '25px',
@@ -99,6 +99,8 @@ class NavBar extends Component {
       marginLeft: '25px',
       marginRight: '25px',
       alignSelf: 'center',
+      color: 'white'
+
     },
   }
 

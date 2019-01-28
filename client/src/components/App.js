@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
+import {
+  Container,
+} from 'semantic-ui-react'
 import NoMatch from './NoMatch';
 import NavBar from './NavBar';
 import Login from './Login';
@@ -16,7 +19,7 @@ import AuthRoute from './AuthRoute';
 class App extends Component {
   render() {
     return (
-      <div style={styles.background}>
+      <Container backgroundColor='black' style={styles.background}>
         <NavBar />
         <Flash />
           <Switch>
@@ -30,7 +33,7 @@ class App extends Component {
             <Route component={NoMatch} />
           </Switch>
         <Footer />
-      </div>
+      </Container>
     );
   }
 }
