@@ -5,22 +5,9 @@ import {
 } from 'semantic-ui-react'
 
 class MediaIcons extends React.Component {
-
-  handleClick = () => {
-    alert("i've been clicked")
+  handleMail = () => {
+    alert('mail')
   }
-
-  // handleFb = () => {
-  //   alert('fb')
-  // }
-
-  // handleInsta = () => {
-  //   alert('insta')
-  // }
-
-  // handleMail = () => {
-  //   alert('mail')
-  // }
 
   render() {
     return(
